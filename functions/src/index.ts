@@ -1,3 +1,6 @@
+// Thanks to Francisco Gutiérrez "Serverless Telegram Bot with Firebase"
+// https://medium.com/@pikilon/serverless-telegram-bot-with-firebase-d11d07579d8a
+
 import * as functions from 'firebase-functions';
 import * as express from 'express';
 import * as cors from 'cors';
