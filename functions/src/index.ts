@@ -88,6 +88,8 @@ app.post('/', async (req, res) => {
             `Юра, вернись, я все прощу!`,
             `Юра, в понедельник едешь на Балаковку и сиди там, пока все не починишь`,
           ]);
+        } else if (username.toLowerCase() === 'allforpidorsbot') {
+          answer = 'Грубо';
         } else {
           answer = rand([
             'А я всегда об этом говорил!',
