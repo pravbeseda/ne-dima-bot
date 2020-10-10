@@ -66,7 +66,6 @@ app.post('/', async (req, res) => {
           answer = rand([
             'Конечно, я всегда об этом говорил!',
             'Не было такого',
-            'Так точно',
             'Не помню',
             `${first_name}, ты о чем вообще?`,
             'Конечно, я всегда об этом говорил!',
@@ -80,6 +79,20 @@ app.post('/', async (req, res) => {
             'Лучше Астру переставь'
           ]);
         }
+      } else if (username.toLowerCase() === 'allforpidorsbot') {
+        if (txt.includes('для пидоров')) {
+          answer = 'бот, извинись';
+        } else if (txt.toLowerCase().includes('не буду')) {
+          answer = rand([
+            `Выбирайте, или он или я`,
+            `Bots lives don't matter`,
+          ]);
+        } else {
+          answer = rand([
+            `Удалите пидорбота`,
+            `Нафига вам в чате боты?`,
+          ]);
+        }
       } else if (canSay() && isRand(botProbability)) {
         if (username.toLowerCase() === 'availov') {
           answer = rand([
@@ -88,11 +101,9 @@ app.post('/', async (req, res) => {
             `Юра, вернись, я все прощу!`,
             `Юра, в понедельник едешь на Балаковку и сиди там, пока все не починишь`,
           ]);
-        } else if (username.toLowerCase() === 'allforpidorsbot') {
-          answer = 'Грубо';
         } else {
           answer = rand([
-            'А я всегда об этом говорил!',
+            'И я всегда об этом говорил!',
             `Дайте мне двух студентов и одну неделю!`,
             `А наши предки никаких аджайлов не знали, делали танки по ГОСТу и войну выиграли!`,
             `Нет, все-таки вы не профессионалы`,
